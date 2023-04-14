@@ -19,7 +19,6 @@ no array or array.methods
 for loop
 
 const uniqueElements = (string) => {
-  let counter = 0;
   let resultString = "";
   for (i=0; i < string.length; i++) {
     const currentChar = string[i];

@@ -24,10 +24,13 @@ WITHOUT RECURSION OR .FILTER:
 
 const removeDuplicates = (inputArray) => {
   let resultArray = [];
-  for (let i=0; i < inputArray.length; i++) {
-    const currentInput = inputArray[i];
-    if (!resultArray.includes(currentInput)) {
-      resultArray.push(inputArray[i]);
+  if (!Array.isArray(resultArray)) {
+    return "Please enter an array";
+  } else {
+    for (let i=0; i < inputArray.length; i++) {
+      if (!resultArray.includes(inputArray[i])) {
+        resultArray.push(inputArray[i]);
+      };
     };
   };
   return resultArray;
@@ -36,9 +39,16 @@ const removeDuplicates = (inputArray) => {
 inputArray = [7, 9, "hi", 7, 12, "hi", 53];
 result = [7, 9, "hi", 12, 53]; 
 
-
 WITH RECURSION:
 
-const removeDuplicates = (inputArray) => {
-  
+const removeDuplicates = (array) => {
+
+};
+
+USING FILTER:
+
+const removeDuplicates = (array) => {
+  return unique = array.filter((item, index) => {
+    return array.indexOf(item) === index;
+  });
 };

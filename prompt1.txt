@@ -46,5 +46,13 @@ result: "Jasmine%20Ann%20Jones";
 WITH RECURSION:
 
 const stringToUrl = (input) => {
+  let firstSpace = input.indexOf(" ");
+  if (firstSpace === -1) {
+    return input;
+  }
   
+  let firstWord = input.substring(0, firstSpace);
+  let updatedFirstWord = firstWord + "%20";
+  let restOfInput = input.substring(firstSpace + 1);
+  return stringToUrl(updatedFirstWord + restOfInput);
 };

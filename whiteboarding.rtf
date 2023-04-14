@@ -1,0 +1,50 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww18000\viewh12940\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 Luckie\
+\
+Array de-duping\
+Remove duplicates\
+\
+W & w.o filter\
+w.o recursion\
+Any data types in array\
+Not in same order\
+\
+Input [7, 9, \'93hi\'94, 12, \'93hi\'94, 7, 53]\
+Output [7, 9, \'93hi\'94, 12, 53]\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 No .filter\
+.includes\
+[] .push\
+For loop\
+.isArray\
+Typeof()\
+(3, 4, 5, 6)\
+[valid data types];\
+\
+Const removeDuplicates = (inputArray) => \{\
+	let resultArray = [];\
+\
+	if (!Array.isArray(inputArray)) \{\
+		return \'93Please enter an array\'94;\
+	\} else \{\
+		for (let I=0; I < inputArray.length; I++) \{\
+		if (!resultArray.includes(inputArray[I])) \{\
+			resultArray.push(inputArray[I]);\
+			\}\
+		\};\
+	\};\
+	return resultArray;\
+\};\
+\
+Const removeDuplicates = (inputArray) => \{\
+	return array = inputArray.filter((item, index) => \{\
+		return inputArray.indexOf(item) === index;\
+	\});\
+\};}

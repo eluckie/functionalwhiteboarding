@@ -52,12 +52,13 @@ Output: true
 
 Write an algorithm that sorts an array without using the sort() method. There are many different sorting algorithms — take the time to read about the following:
 
-Quick sort
-Merge sort
-Heap sort
-Insertion sort
-Bubble sort
-Selection sort
+* Quick sort
+* Merge sort
+* Heap sort
+* Insertion sort
+* Bubble sort
+* Selection sort
+
 You may implement any of the above algorithms (or your own) to solve the problem — as long as it doesn't use sort().
 
 Example
