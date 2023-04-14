@@ -11,3 +11,25 @@ Output: true
 
 __________________________________________________________________
 
+input - string
+
+output - boolean
+
+no array or array.methods
+for loop
+
+const uniqueElements = (string) => {
+  let counter = 0;
+  let resultString = "";
+  for (i=0; i < string.length; i++) {
+    const currentChar = string[i];
+    if (!resultString.includes(currentChar)) {
+      resultString += currentChar;
+    }
+  }
+  if (resultString === string) {
+    return true;
+  } else {
+    return false;
+  }
+};

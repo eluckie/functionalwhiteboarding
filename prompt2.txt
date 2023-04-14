@@ -7,3 +7,38 @@ Output: [7, 9, "hi", 12, 53]
 
 __________________________________________________________________
 
+input - array (diff data types)
+
+output - array (diff data types)
+same order as original?
+
+solve w .filter
+
+solve w.o .filter
+.includes
+.push []
+for loop
+
+
+WITHOUT RECURSION OR .FILTER:
+
+const removeDuplicates = (inputArray) => {
+  let resultArray = [];
+  for (let i=0; i < inputArray.length; i++) {
+    const currentInput = inputArray[i];
+    if (!resultArray.includes(currentInput)) {
+      resultArray.push(inputArray[i]);
+    };
+  };
+  return resultArray;
+};
+
+inputArray = [7, 9, "hi", 7, 12, "hi", 53];
+result = [7, 9, "hi", 12, 53]; 
+
+
+WITH RECURSION:
+
+const removeDuplicates = (inputArray) => {
+  
+};

@@ -7,3 +7,47 @@ Output: "3ab2c4da"
 
 __________________________________________________________________
 
+input - string of letters
+special characters or numbers?
+
+output - string of numbers & letters
+
+w recursion
+w.o recursion
+
+for loop
+string > array.from > string .join
+empty result string > .concat +
+
+
+WITHOUT RECURSION:
+
+const stringCompression = (string) => {
+  let result = "";
+  let counter = 1;
+  for (let i=0; i < string.length; i++) {
+    let currentChar = string[i];
+    let nextChar = string[i + 1];
+    if (currentChar === nextChar) {
+      counter++;
+    } else if (counter === 1) {
+      result += currentChar;
+    } else {
+      result+= counter + currentChar;
+      currentChar = string[i];
+      counter = 1;
+    }
+  }
+  return result;
+};
+
+
+WITH RECURSION:
+
+const stringCompression = (string) => {
+
+};
+
+
+string = "aaabccdddda";
+result = "3ab2c4da";

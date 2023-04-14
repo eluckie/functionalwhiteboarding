@@ -9,3 +9,42 @@ Output: "Jasmine%20Ann%20Jones"
 
 __________________________________________________________________
 
+input - string
+
+output - string
+all spaces replaced with %20
+
+! no regex
+! no .replace
+solve w recursion & w.o recursion
+
+- w.o recursion initial thought: for loop
+.split
+turn into an array
+array > string .join
+
+
+WITHOUT RECURSION:
+
+const stringToUrl = (input) => {
+  if (typeof(input) === 'string') {
+    const splitString = input.split(" ");
+    const stringArray = Array.from(splitString);
+    const result = stringArray.join("%20");
+    return result;
+  } else {
+    return "Please enter a string!";
+  };
+};
+
+string = "Jasmine Ann Jones";
+splitString = "Jasmine", "Ann", "Jones";
+stringArray = ["Jasmine", "Ann", "Jones"];
+result: "Jasmine%20Ann%20Jones";
+
+
+WITH RECURSION:
+
+const stringToUrl = (input) => {
+  
+};
